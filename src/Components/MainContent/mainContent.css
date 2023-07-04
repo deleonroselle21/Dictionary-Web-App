@@ -2,7 +2,7 @@
     display: flex;
     border-radius: 16px;
     overflow: hidden;
-    border:1px solid #A445ED;
+    
 }
 .search__wrapper input{
     width:100%;
@@ -23,6 +23,10 @@
     outline:none;
     border: #A445ED;
 }
+.search__wrapper:focus-within {
+    border: 1.5px solid#A445ED;
+
+  }
 
 .search__wrapper button{
     border-top-right-radius: 16px;
@@ -149,7 +153,7 @@ li{
     padding-bottom: 1.5rem;
     font-size: 1.25rem;
 }
-.synonyms__text,.antonyms__text{
+.synonyms__text,.antonyms__text,.source__text{
     display: inline-block;
     color: #757575;
     font-size: 1.25rem;
@@ -211,6 +215,10 @@ li{
     gap:1rem;
 }
 
+.source{
+  display: flex; 
+  gap: 1rem;
+}
 .dark .sourceUrl{
    color:white;
     
@@ -227,13 +235,17 @@ li{
     .partOfSpeech{
         font-size: 1.12rem;
     }
+    .source,.source__wrapper{
+      
+        gap: 0.3rem;
+      }
     .meaning__text{
         font-size:1rem;
     }
     .definitions{
         font-size: 0.93rem;
     }
-    .synonyms__text,.antonyms__text{
+    .synonyms__text,.antonyms__text,.source__text{
         font-size: 1rem;
     }
     .synonyms,.antonyms{

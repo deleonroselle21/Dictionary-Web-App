@@ -6,6 +6,7 @@ import Logo from '../../assets/images/logo.svg'
 
 const Navbar = (props) => {
    
+   
 
     return (
         <nav className={`container nav__container ${props.theme} ${props.font}`} >

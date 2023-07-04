@@ -211,13 +211,13 @@ const MainContent = (props) => {
                         {/*   <img src={PlayIcon} onClick={() => data[0].phonetics.map(data => data.audio[0] && new Audio(data.audio).play())}></img>*/}
                         <img src={PlayIcon} onClick={() => {
                             data[0].phonetics[0].audio ?
-                            new Audio(data[0].phonetics[0].audio).play() :
-                            data[0].phonetics[1].audio ?
-                            new Audio(data[0].phonetics[1].audio).play() :
-                            data[0].phonetics[2].audio ?
-                            new Audio(data[0].phonetics[2].audio).play() :
-                            data[0].phonetics[3].audio &&
-                            new Audio(data[0].phonetics[3].audio).play()
+                                new Audio(data[0].phonetics[0].audio).play() :
+                                data[0].phonetics[1].audio ?
+                                    new Audio(data[0].phonetics[1].audio).play() :
+                                    data[0].phonetics[2].audio ?
+                                        new Audio(data[0].phonetics[2].audio).play() :
+                                        data[0].phonetics[3].audio &&
+                                        new Audio(data[0].phonetics[3].audio).play()
 
 
 
@@ -259,7 +259,7 @@ const MainContent = (props) => {
                                             data.length !== 0 ?
                                                 Object.keys(ArrayDefinition)[index] === Object.keys(SynonymsArray)[index_1] &&
                                                 <div className='synonyms__wrapper'>
-                                                    {data_1.length>0 &&<p className='synonyms__text'>Synonyms</p>}
+                                                    {data_1.length > 0 && <p className='synonyms__text'>Synonyms</p>}
                                                     <div >
                                                         {data_1.map((data, index) =>
 
@@ -272,23 +272,28 @@ const MainContent = (props) => {
                                                     </div>
 
                                                 </div>
+
+
                                                 : null
                                         )}
-                                        {Object.values(AntonymsArray).map((data, index) =>
+                                        {Object.values(AntonymsArray).map((data_1, index) =>
 
 
                                             data.length !== 0 ?
                                                 Object.keys(ArrayDefinition)[index] === Object.keys(AntonymsArray)[index_1] &&
                                                 <div className='antonyms__wrapper'>
-                                                    <p className='antonyms__text'>Antonyms</p>
-                                                    {data.map((data, index) =>
+                                                    {data_1.length > 0 && <p className='antonyms__text'>Antonyms</p>}
+                                                    <div>
+                                                    {data_1.map((data, index) =>
 
 
 
-                                                        <span className='antonyms' key={index}>{data}</span>
+                                                        <span className='antonyms' key={index}  >{data}{data_1.length > 1 ? index <= data.length - 1 ? ", " : null : null}</span>
+
 
 
                                                     )}
+                                                    </div>
                                                 </div>
                                                 : null
                                         )}
@@ -296,16 +301,7 @@ const MainContent = (props) => {
                                         {/*  <p className='sourceUrl'>{data.sourceUrls}</p>*/}
                                     </div>
                                     : null) : <p>Sorry no results found</p>}
-                        {/*
-                <div className='synonyms__wrapper'>
-                    {data.map(data => data.meanings.map(data => data.synonyms.length > 0 ? <p className='synonyms__text'>Synonyms</p> : null))}
-                    <div>{data.map(data => data.meanings.map(data => data.synonyms.map(data => <span className='synonyms'> {data}</span>)))}</div>
-                </div>
-                <div className='antonyms__wrapper'>
-                    {data.map(data => data.meanings.map(data => data.synonyms.length > 0 ? <p className='synonyms__text'>Antonyms</p> : null))}
-                    <div>{data.map(data => data.meanings.map(data => data.antonyms.map(data => <span className='antonyms'> {data}</span>)))}</div>
-                </div>
-                                */}
+
 
                     </div></>
                 : <div className='error__wrapper' style={{ display: "grid" }}>
@@ -327,10 +323,10 @@ const MainContent = (props) => {
                 <>
                     <hr></hr>
                     <div className='source__wrapper'>
-                        <p className='synonyms__text'>Source</p>
+                        <p className='source__text'>Source</p>
                         <div>
 
-                            {data.length > 0 && data.map(data => data.sourceUrls.map(data => <div style={{ display: "flex", gap: "1rem" }}><a href={data} className='synonyms__text'>{data}</a>     <img style={{ cursor: "pointer" }} src={SourceIcon} alt="" /></div>))}
+                            {data.length > 0 && data.map(data => data.sourceUrls.map(data => <div className="source" ><a href={data} target="_blank" className='source__text'>{data}</a>    <a href={data} target="_blank"> <img style={{ cursor: "pointer" }} src={SourceIcon} alt="" /></a></div>))}
 
                         </div>
 
