@@ -95,6 +95,18 @@
    text-align: center;
 
   }
+  .Mono{
+    font-family: 'Inconsolata', monospace;
+}
+
+.Sans-Serif{
+      font-family: 'Inter','sans-serif'
+}
+
+.Serif{
+    font-family: 'Lora', serif;
+}
+
 
   .dark select{
     color:white;
@@ -105,4 +117,13 @@
   }
 .styleoption{
     padding:1rem;
+  }
+
+  @media  (max-width: 600px) {
+
+    .nav__container{
+        padding:1.3rem 0 1.3rem 0;
+
+    }
+
   }

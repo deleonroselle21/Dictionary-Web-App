@@ -51,7 +51,7 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar handleFontChange={handleFontChange} theme={theme} toggleTheme={toggleTheme} />
+      <Navbar handleFontChange={handleFontChange} theme={theme} font={font} toggleTheme={toggleTheme} />
       <MainContent themeChange={theme} font={font}/>
 
      

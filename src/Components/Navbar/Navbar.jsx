@@ -8,7 +8,7 @@ const Navbar = (props) => {
    
 
     return (
-        <nav className={`container nav__container ${props.theme}`} >
+        <nav className={`container nav__container ${props.theme} ${props.font}`} >
             <div>
                 <img src={Logo} alt="logo"></img>
             </div>
