@@ -110,6 +110,13 @@ li{
 
 
 }
+.title{
+    color:#757575;
+    font-size: 1.12rem;
+    font-weight: 400;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+}
 .dark .word{
     color:white;
 }

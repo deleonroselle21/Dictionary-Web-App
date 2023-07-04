@@ -242,13 +242,14 @@ const MainContent = (props) => {
                                                 <div style={{ border: "0.3px solid gray", width: "100%" }}></div>
                                             </div>
                                         </div>
+                                        <p className="title">Meaning</p>
                                         <ul>
                                             {data.map((data, index) =>
                                                 <li
                                                     key={index}
                                                 >
                                                     <span className='definitions'>{data.definition}</span>
-                                                    {data.example ? <p className='word__example'>{data.example}</p> : null}
+                                                    {data.example ? <p className='word__example'>{`"${data.example}"`}</p> : null}
                                                 </li>
                                             )}
                                         </ul>
